@@ -18,7 +18,7 @@ export default function Nav() {
         <NavLink to='/no'>Noroeste</NavLink>
         <NavLink to='/viaje'>Mi viaje</NavLink>
         </div>
-        <button onClick={logout} >Logout</button>
+        <button onClick={logout} className='btn-logout'>Logout</button>
     </nav>
     </>
   )

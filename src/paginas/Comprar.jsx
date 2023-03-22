@@ -14,11 +14,12 @@ const Comprar = () => {
         navegacion(-1);
     }
     
-    const {dispatch2, contratacion} = useContext(Contexto);
+    const {dispatch2, contratacion, setSuma, suma} = useContext(Contexto);
 
     const encontrado = contratacion.find(objeto => objeto.sitio === nombre);
 
     const contratar = ()=>{
+      setSuma(+suma + destinoEncontrado.precio)
       const action = {
         type: types.contratar,
         payload: {
@@ -30,6 +31,7 @@ const Comprar = () => {
     }
 
     const anular = ()=>{
+      setSuma(+suma - destinoEncontrado.precio)
       const action = {
         type: types.anular,
         payload: {

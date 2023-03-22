@@ -1,4 +1,4 @@
-import { useReducer } from "react"
+import { useReducer, useState } from "react"
 import Contexto from "./Contexto"
 import miReducer from "./miReducer"
 import miReducer2 from "./miReducer2"
@@ -13,21 +13,14 @@ const init=()=>{
   }
  }
 
- const valorInicial = [
-  {
-    sitio: 'Mendoza',
-    precio:99
-  },
-  {
-    sitio: 'Córdoba',
-    precio:102
-  }
- ]
+ const valorInicial = [];
 
 const Provider = ({children}) => {
 
   const [autentificacion, dispatch] = useReducer(miReducer, {}, init);
   const [contratacion, dispatch2] = useReducer(miReducer2, valorInicial);
+  const [referencia, setReferencia] = useState('');
+  const [suma, setSuma] = useState(0);
 
   const loguearse = (user='')=>{
     const action = {
@@ -56,7 +49,11 @@ const Provider = ({children}) => {
       ...autentificacion,
       loguearse,
       desloguearse,
-      dispatch2
+      dispatch2,
+      referencia,
+      setReferencia,
+      suma,
+      setSuma
     }}>
         {children}
     </Contexto.Provider>

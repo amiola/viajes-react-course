@@ -14,6 +14,7 @@ const miReducer2 = (state =[], action) => {
       return (
         state.filter(dato=>dato.sitio !== action.payload.sitio)
       )
+
     default:
         return state;
   }

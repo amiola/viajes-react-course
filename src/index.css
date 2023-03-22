@@ -31,7 +31,7 @@ nav a {
   background: gray;
 }
 
-button {
+.btn-logout {
   padding: 0.5rem;
   background: lightblue;
   border-radius: 0.5rem;
@@ -89,7 +89,8 @@ img {
   text-overflow: ellipsis;
 }
 
-.destino a {
+.destino a,
+.aviso a {
   text-align: center;
   margin: 0.5rem;
   color: white;
@@ -175,4 +176,44 @@ img {
 
 .lugar-visitar {
   margin: 1rem 2rem;
+}
+
+.login {
+  padding-top: 2rem;
+  width: 50rem;
+  height: 20rem;
+  border: 0.5rem solid orangered;
+  border-radius: 1rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: orangered;
+}
+
+.login input {
+  color: orangered;
+  padding: 0.5rem 0.9rem;
+  font-size: 1.5rem;
+  outline: none;
+  border: 1px dotted orangered;
+  border-radius: 0.5rem 0 0 0.5rem;
+  border-right: none;
+}
+
+.btn-login {
+  background-color: orangered;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid orangered;
+  border-radius: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+}
+
+.aviso {
+  margin: 2rem;
 }
